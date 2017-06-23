@@ -18,6 +18,8 @@ public class Movie {
     String backdropPath;
     //average vote
     Double voteAverage;
+    //popularity
+    Double popularity;
 
     //constructor
     public Movie() {
@@ -31,6 +33,7 @@ public class Movie {
         backdropPath = object.getString("backdrop_path");
         //TODO - this might be potential error
         voteAverage = object.getDouble("vote_average");
+        popularity = object.getDouble("popularity");
     }
 
     public String getTitle() {
@@ -51,5 +54,9 @@ public class Movie {
 
     public Double getVoteAverage() {
         return voteAverage;
+    }
+
+    public Double getPopularity() {
+        return popularity;
     }
 }
